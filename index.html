@@ -1,19 +1,23 @@
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meine persönliche Website</title>
+  <title>Flo Bischoff | Personal Website</title>
+
   <style>
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0c1020;
       color: white;
     }
+
     header {
       padding: 20px 8%;
       display: flex;
@@ -23,67 +27,113 @@
       gap: 20px;
       background: #151a30;
     }
+
     .logo {
       font-size: 24px;
       font-weight: bold;
       color: #b48cff;
     }
+
     nav {
       display: flex;
       flex-wrap: wrap;
       gap: 18px;
     }
+
     nav a {
       color: white;
       text-decoration: none;
     }
+
     nav a:hover { color: #b48cff; }
+
+    /* HOMEPAGE */
+
     .hero {
       min-height: 80vh;
       padding: 100px 8%;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: radial-gradient(circle at top,
-        #50348c, #151a30 65%, #0c1020);
+      align-items: flex-end;
+      text-align: right;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.10),
+          rgba(0,0,0,0.65)
+        ),
+        url('FLO_IBIZA_2026.jpg')
+        center 35% / cover no-repeat;
     }
+
+    .hero-content {
+      width: 100%;
+      max-width: 700px;
+    }
+
     h1 {
-      font-size: clamp(38px, 7vw, 76px);
+      font-size: clamp(38px, 6vw, 76px);
+      line-height: 1.15;
       margin: 0 0 20px;
     }
-    h1 span { color: #b48cff; }
+
+    h1 span {
+      display: block;
+      color: #b48cff;
+    }
+
     .hero p {
       font-size: 20px;
-      color: #d2cce4;
-      max-width: 650px;
+      color: #f0eaf8;
       line-height: 1.7;
     }
+
     .button {
       display: inline-block;
       margin-top: 25px;
       padding: 15px 30px;
       border-radius: 30px;
-      background: linear-gradient(90deg, #8954ed, #d65acb);
+      background: linear-gradient(
+        90deg, #8954ed, #d65acb
+      );
       color: white;
       text-decoration: none;
       font-weight: bold;
       transition: transform .2s;
     }
-    .button:hover { transform: scale(1.06); }
-    section { padding: 90px 8%; text-align: center; }
-    section h2 { font-size: 36px; color: #c39aff; }
+
+    .button:hover {
+      transform: scale(1.06);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 36px;
+      color: #c39aff;
+    }
+
     section p {
       color: #c8c9d7;
       line-height: 1.8;
     }
+
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
       margin-top: 35px;
     }
+
     .card {
       background: #1b213a;
       padding: 35px 25px;
@@ -91,87 +141,160 @@
       border: 1px solid #393258;
       transition: transform .2s;
     }
-    .card:hover { transform: translateY(-8px); }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
     .card h3 { color: #d1b4ff; }
+
     footer {
       padding: 30px;
       text-align: center;
       background: #151a30;
       color: #a9aabc;
     }
+
+    /* MOBILE OPTIMIZATION */
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 75vh;
+        padding: 80px 6%;
+        background-position: center 35%;
+      }
+
+      h1 {
+        font-size: clamp(32px, 8vw, 48px);
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+    }
+
   </style>
 </head>
+
 <body>
+
   <header>
-    <div class="logo">Meine Welt ✨</div>
+    <div class="logo">Flo Bischoff ✨</div>
+
     <nav>
-      <a href="#start">Startseite</a>
-      <a href="#ueber-mich">Über mich</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#projekte">Projekte</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-   <div class="hero" id="start" style="
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.25),
-      rgba(0,0,0,0.65)
-    ),
-    url('FLO_IBIZA_2026.jpg') center 35% / cover no-repeat;
-">
-      <h1>Hello World! <span>Flo Bischoff.</span></h1>
-      <p>
-       Nice That you are here!
-      </p>
-      <a href="#ueber-mich" class="button">
-        Discover
-      </a>
+
+    <!-- HOME -->
+
+    <div class="hero" id="home">
+      <div class="hero-content">
+
+        <h1>
+          Hello World!
+          <span>Flo Bischoff.</span>
+        </h1>
+
+        <p>Nice that you are here!</p>
+
+        <a href="#about" class="button">
+          Discover
+        </a>
+
+      </div>
     </div>
 
-    <section id="ueber-mich">
-      <h2>Über mich</h2>
+    <!-- ABOUT -->
+
+    <section id="about">
+      <h2>About Me</h2>
+
       <p>
-        Hier erfährst du bald mehr über mich,
-        meine Interessen und meine Geschichte.
+        Here you will soon learn more about me,
+        my interests and my story.
       </p>
     </section>
 
-    <section id="galerie">
-      <h2>Meine Galerie</h2>
-      <p>Hier zeige ich bald meine schönsten Fotos.</p>
+    <!-- GALLERY -->
+
+    <section id="gallery">
+      <h2>My Gallery</h2>
+
+      <p>
+        Here I will share my favorite photographs.
+      </p>
+
       <div class="cards">
-        <div class="card"><h3>📸 Meine Fotos</h3></div>
-        <div class="card"><h3>🌍 Meine Erlebnisse</h3></div>
-        <div class="card"><h3>✨ Besondere Momente</h3></div>
+
+        <div class="card">
+          <h3>📸 My Photos</h3>
+        </div>
+
+        <div class="card">
+          <h3>🌍 My Adventures</h3>
+        </div>
+
+        <div class="card">
+          <h3>✨ Special Moments</h3>
+        </div>
+
       </div>
     </section>
 
-    <section id="projekte">
-      <h2>Meine Projekte</h2>
-      <p>Hier findest du meine Ideen und Projekte.</p>
+    <!-- PROJECTS -->
+
+    <section id="projects">
+      <h2>My Projects</h2>
+
+      <p>
+        Explore my ideas and projects.
+      </p>
+
       <div class="cards">
+
         <div class="card">
-          <h3>Projekt 1</h3>
-          <p>Mein erstes spannendes Projekt.</p>
+          <h3>Project 1</h3>
+          <p>My first exciting project.</p>
         </div>
+
         <div class="card">
-          <h3>Projekt 2</h3>
-          <p>Weitere Ideen folgen bald.</p>
+          <h3>Project 2</h3>
+          <p>More ideas coming soon.</p>
         </div>
+
       </div>
     </section>
 
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>Hier wird später meine Kontaktmöglichkeit stehen.</p>
+    <!-- CONTACT -->
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <p>
+        Contact information will be available here soon.
+      </p>
     </section>
+
   </main>
 
   <footer>
-    © 2026 Meine persönliche Website
+    © 2026 Flo Bischoff. All rights reserved.
   </footer>
+
 </body>
 </html>
