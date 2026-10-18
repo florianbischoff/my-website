@@ -4,22 +4,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meine erste Webseite</title>
+  <title>Meine persönliche Website</title>
   <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f4f8;
-      text-align: center;
-      padding: 60px 20px;
+      background: #0c1020;
+      color: white;
     }
-    h1 { color: #2563eb; }
-    p { font-size: 18px; color: #444; }
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: #151a30;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #b48cff;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    nav a:hover { color: #b48cff; }
+    .hero {
+      min-height: 80vh;
+      padding: 100px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at top,
+        #50348c, #151a30 65%, #0c1020);
+    }
+    h1 {
+      font-size: clamp(38px, 7vw, 76px);
+      margin: 0 0 20px;
+    }
+    h1 span { color: #b48cff; }
+    .hero p {
+      font-size: 20px;
+      color: #d2cce4;
+      max-width: 650px;
+      line-height: 1.7;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 30px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #8954ed, #d65acb);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform .2s;
+    }
+    .button:hover { transform: scale(1.06); }
+    section { padding: 90px 8%; text-align: center; }
+    section h2 { font-size: 36px; color: #c39aff; }
+    section p {
+      color: #c8c9d7;
+      line-height: 1.8;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+    .card {
+      background: #1b213a;
+      padding: 35px 25px;
+      border-radius: 18px;
+      border: 1px solid #393258;
+      transition: transform .2s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card h3 { color: #d1b4ff; }
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: #151a30;
+      color: #a9aabc;
+    }
   </style>
 </head>
 <body>
-  <h1>Willkommen auf meiner Webseite!</h1>
-  <p>Meine erste eigene Webseite ist online.</p>
-  <p>Erstellt mit GitHub.</p>
+  <header>
+    <div class="logo">Meine Welt ✨</div>
+    <nav>
+      <a href="#start">Startseite</a>
+      <a href="#ueber-mich">Über mich</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#projekte">Projekte</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="start">
+      <h1>Willkommen in <span>meiner Welt.</span></h1>
+      <p>
+        Schön, dass du hier bist! Entdecke meine
+        Bilder, meine Ideen und meine Projekte.
+      </p>
+      <a href="#ueber-mich" class="button">
+        Mehr entdecken
+      </a>
+    </div>
+
+    <section id="ueber-mich">
+      <h2>Über mich</h2>
+      <p>
+        Hier erfährst du bald mehr über mich,
+        meine Interessen und meine Geschichte.
+      </p>
+    </section>
+
+    <section id="galerie">
+      <h2>Meine Galerie</h2>
+      <p>Hier zeige ich bald meine schönsten Fotos.</p>
+      <div class="cards">
+        <div class="card"><h3>📸 Meine Fotos</h3></div>
+        <div class="card"><h3>🌍 Meine Erlebnisse</h3></div>
+        <div class="card"><h3>✨ Besondere Momente</h3></div>
+      </div>
+    </section>
+
+    <section id="projekte">
+      <h2>Meine Projekte</h2>
+      <p>Hier findest du meine Ideen und Projekte.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Projekt 1</h3>
+          <p>Mein erstes spannendes Projekt.</p>
+        </div>
+        <div class="card">
+          <h3>Projekt 2</h3>
+          <p>Weitere Ideen folgen bald.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>Hier wird später meine Kontaktmöglichkeit stehen.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Meine persönliche Website
+  </footer>
 </body>
 </html>
-  
