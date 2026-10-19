@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The personal website of Flo Bischoff: professional background, guitar, motorcycling, cooking, travel, poetry and photography.">
+  <meta name="description" content="The personal website of Flo Bischoff: professional background, guitar, motorcycling, cooking, travel, poetry, photography, browser games and patent curiosities.">
   <title>Flo Bischoff | Personal Website</title>
   <style>
     :root {
@@ -16,7 +16,6 @@
       --accent: #b48cff;
       --line: rgba(210, 191, 255, .17);
     }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 110px; }
     body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--bg); line-height: 1.65; }
@@ -25,7 +24,6 @@
 
     .skip-link { position: absolute; top: -80px; left: 12px; z-index: 100; padding: 10px 15px; background: var(--accent); color: #0c1020; }
     .skip-link:focus { top: 12px; }
-
     header {
       position: sticky; top: 0; z-index: 20;
       display: flex; align-items: center; justify-content: space-between;
@@ -37,7 +35,6 @@
     nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 7px 17px; }
     nav a { font-size: .88rem; font-weight: 600; text-decoration: none; color: #e8e2fa; transition: color .2s ease; }
     nav a:hover { color: var(--accent); }
-
     .hero { position: relative; min-height: min(790px, 85vh); display: flex; align-items: center; overflow: hidden; background: #1b1d2c; }
     .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
     .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12,16,32,.12) 0%, rgba(12,16,32,.42) 44%, rgba(12,16,32,.91) 100%); }
@@ -53,7 +50,6 @@
     .button-primary { color: #151326; background: var(--accent); }
     .button-primary:hover { background: #c6a8ff; }
     .button-outline { color: #fff; border: 1px solid #baa8da; background: rgba(20,21,35,.36); }
-
     main section { scroll-margin-top: 115px; }
     .container { max-width: 1120px; margin: 0 auto; padding: 90px 6%; }
     .section-label { color: var(--accent); font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .17em; margin: 0 0 10px; }
@@ -64,7 +60,6 @@
     .about { background: #11162a; border-block: 1px solid var(--line); }
     .about-copy { max-width: 840px; color: #e2dff1; font-size: 1.05rem; }
     .about-copy strong { color: #fff; }
-
     .hobbies-intro { max-width: 690px; }
     .hobby-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 35px; }
     .hobby-card { display: block; padding: 25px; border-radius: 18px; background: var(--panel); border: 1px solid var(--line); text-decoration: none; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
@@ -72,20 +67,19 @@
     .hobby-icon { display: inline-block; font-size: 2rem; margin-bottom: 5px; }
     .hobby-card p { font-size: .94rem; color: var(--muted); margin-bottom: 0; }
     .hobby-card .more { display: inline-block; margin-top: 18px; color: var(--accent); font-weight: 700; font-size: .89rem; }
-
     .story { border-top: 1px solid var(--line); }
     .story:nth-of-type(even) { background: #11162a; }
     .story .container { padding-top: 64px; padding-bottom: 64px; }
     .story p:last-child { margin-bottom: 0; }
-
     .contact { border-top: 1px solid var(--line); background: linear-gradient(140deg,#1b2140 0%,#11162a 65%); }
     .contact-copy { max-width: 650px; color: #ded9ed; }
-    .contact-actions { margin-top: 26px; }
+    .contact-copy a { color: #d7bcff; text-underline-offset: 4px; }
+    .contact-actions { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
     footer { padding: 26px 6%; text-align: center; color: #bcb5ce; border-top: 1px solid var(--line); font-size: .9rem; }
-
     @media (max-width: 950px) {
-      header { justify-content: center; }
-      nav { justify-content: center; }
+      header { flex-direction: column; justify-content: center; gap: 8px; }
+      nav { width: 100%; justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+      nav a { flex: 0 0 auto; }
       .hero-content { width: min(540px, 70%); margin-right: 6%; }
       .hero::after { background: linear-gradient(90deg,rgba(12,16,32,.2),rgba(12,16,32,.82) 100%); }
       .hobby-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -107,7 +101,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header>
     <a class="logo" href="#home">Flo Bischoff.</a>
     <nav aria-label="Main navigation">
@@ -119,10 +112,11 @@
       <a href="#travel">Travel</a>
       <a href="#poetry">Poetry</a>
       <a href="#photography">Photography</a>
+      <a href="#browser-games">Browser-Games</a>
+      <a href="#patents-fun">Patents Fun</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <main id="main">
     <section class="hero" id="home" aria-label="Welcome">
       <img class="hero-photo" src="FLO_IBIZA_2026.jpg" alt="Flo Bischoff in Ibiza">
@@ -136,7 +130,6 @@
         </div>
       </div>
     </section>
-
     <section class="about" id="about">
       <div class="container">
         <p class="section-label">Get to know me</p>
@@ -149,12 +142,11 @@
         </div>
       </div>
     </section>
-
     <section id="hobbies">
       <div class="container">
         <p class="section-label">Beyond the office</p>
         <h2>My Hobbies &amp; Passions</h2>
-        <p class="lead hobbies-intro">From music and motorcycles to food, new places, words and images — these are the things I love spending time on.</p>
+        <p class="lead hobbies-intro">From music and motorcycles to food, new places, words, images and playful ideas — these are the things I love spending time on.</p>
         <div class="hobby-grid">
           <a class="hobby-card" href="#guitar"><span class="hobby-icon" aria-hidden="true">🎸</span><h3>Guitar</h3><p>Music, chords and the joy of playing.</p><span class="more">Discover more →</span></a>
           <a class="hobby-card" href="#motorcycling"><span class="hobby-icon" aria-hidden="true">🏍️</span><h3>Motorcycling</h3><p>Two wheels, open roads and new perspectives.</p><span class="more">Discover more →</span></a>
@@ -162,30 +154,34 @@
           <a class="hobby-card" href="#travel"><span class="hobby-icon" aria-hidden="true">🌍</span><h3>Travel</h3><p>Discovering places, cultures and unforgettable moments.</p><span class="more">Discover more →</span></a>
           <a class="hobby-card" href="#poetry"><span class="hobby-icon" aria-hidden="true">✒️</span><h3>Poetry</h3><p>Thoughts, emotions and the power of words.</p><span class="more">Discover more →</span></a>
           <a class="hobby-card" href="#photography"><span class="hobby-icon" aria-hidden="true">📷</span><h3>Photography</h3><p>Capturing light, details and special moments.</p><span class="more">Discover more →</span></a>
+          <a class="hobby-card" href="#browser-games"><span class="hobby-icon" aria-hidden="true">🎮</span><h3>Browser-Games</h3><p>Small games to play right here in your browser.</p><span class="more">Discover more →</span></a>
+          <a class="hobby-card" href="#patents-fun"><span class="hobby-icon" aria-hidden="true">💡</span><h3>Patents Fun</h3><p>Curious inventions and the entertaining side of patents.</p><span class="more">Discover more →</span></a>
         </div>
       </div>
     </section>
-
     <section class="story" id="guitar"><div class="container"><p class="section-label">Music</p><h2>🎸 Guitar</h2><p class="lead">Playing the guitar is a wonderful way for me to switch off, get creative and enjoy music. This is where I can share songs, favourite sounds and musical moments.</p></div></section>
     <section class="story" id="motorcycling"><div class="container"><p class="section-label">On the road</p><h2>🏍️ Motorcycling</h2><p class="lead">For me, motorcycling is about the experience of being on the road. Here, there is room for favourite routes, memorable rides and pictures from my journeys.</p></div></section>
     <section class="story" id="cooking"><div class="container"><p class="section-label">In the kitchen</p><h2>🍳 Cooking</h2><p class="lead">Cooking brings together creativity, curiosity and good food. I'd like to share recipes, experiments and dishes worth remembering.</p></div></section>
     <section class="story" id="travel"><div class="container"><p class="section-label">Around the world</p><h2>🌍 Travel</h2><p class="lead">Travel is a chance to discover something new. This space is for interesting places, experiences and impressions collected along the way.</p></div></section>
     <section class="story" id="poetry"><div class="container"><p class="section-label">In words</p><h2>✒️ Poetry</h2><p class="lead">Sometimes a few words can capture a thought or feeling better than a long explanation. This is a place for poetry and inspiration.</p></div></section>
     <section class="story" id="photography"><div class="container"><p class="section-label">Through the lens</p><h2>📷 Photography</h2><p class="lead">Photography lets me hold on to moments, perspectives and details. Here, I plan to share selected photographs and the stories behind them.</p></div></section>
-
+    <section class="story" id="browser-games"><div class="container"><p class="section-label">Play online</p><h2>🎮 Browser-Games</h2><p class="lead">A collection of small browser games is coming soon. You'll be able to play them directly on this website, without installing anything.</p></div></section>
+    <section class="story" id="patents-fun"><div class="container"><p class="section-label">The lighter side of innovation</p><h2>💡 Patents Fun</h2><p class="lead">Unusual patents, clever inventions and the fun side of intellectual property. This is where I'll share curious discoveries and entertaining patent stories.</p></div></section>
     <section class="contact" id="contact">
       <div class="container">
         <p class="section-label">Let's connect</p>
         <h2>Contact</h2>
         <div class="contact-copy">
           <p>Have a question, an idea or simply want to say hello? I'm always happy to connect and exchange ideas.</p>
-          <p>You can find me on GitHub. More contact options can be added here later.</p>
+          <p>Email me at <a href="mailto:Florian.Bischoff39@googlemail.com">Florian.Bischoff39@googlemail.com</a>, or find me on GitHub.</p>
         </div>
-        <div class="contact-actions"><a class="button button-primary" href="https://github.com/florianbischoff" target="_blank" rel="noopener noreferrer">Visit My GitHub ↗</a></div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:Florian.Bischoff39@googlemail.com">Send Me an Email ✉</a>
+          <a class="button button-outline" href="https://github.com/florianbischoff" target="_blank" rel="noopener noreferrer">Visit My GitHub ↗</a>
+        </div>
       </div>
     </section>
   </main>
-
   <footer>© <span id="year">2026</span> Flo Bischoff · Made with curiosity.</footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
